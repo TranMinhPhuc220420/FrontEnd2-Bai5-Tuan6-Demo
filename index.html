@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .side-nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .side-shape-back,
+      .side-shape-front {
+        position: absolute;
+        right: 0;
+      }
+      .side-shape-back {
+        fill: green;
+        width: 100px;
+        height: 50%;
+        top: 25%;
+        transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .side-shape-front {
+        fill: yellow;
+        width: 0;
+        height: 50%;
+        top: 25%;
+        transition: 0.5s 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .side-nav:hover .side-shape-back {
+        width: 300px;
+        height: 70%;
+        top: 15%;
+      }
+      .side-nav:hover .side-shape-front {
+        width: 250px;
+      }
+      .menu,
+      .menu-demo {
+        top: 40%;
+        padding: 0;
+        list-style: none;
+        z-index: 99;
+        position: absolute;
+      }
+      .menu-item {
+        /* color: #fff; */
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .menu {
+        left: -100px;
+      }
+
+      .menu-demo {
+          top: 42%;
+        left: -30px;
+      }
+
+      .menu-demo li {
+        margin: 10px 0px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="side-nav">
+      <svg
+        version="1.1"
+        class="side-shape-back"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 130 200"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M130,200V0c0,39.1-66.8,56.7-66.8,105.1C63.2,139.7,130,154.1,130,200z"
+        />
+      </svg>
+      <svg
+        version="1.1"
+        class="side-shape-front"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 130 200"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M130,200V0c0,31.9-87.8,45.3-87.8,100C42.2,151.7,130,172,130,200z"
+        />
+      </svg>
+      <!-- <ul class="menu">
+        <li class="menu-item">Test 1</li>
+        <li class="menu-item">Test 2</li>
+        <li class="menu-item">Test 3</li>
+        <li class="menu-item">Test 4</li>
+      </ul> -->
+      <ul class="menu-demo">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+  </body>
+</html>
